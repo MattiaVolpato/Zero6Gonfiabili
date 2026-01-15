@@ -1,0 +1,63 @@
+<section class="py-3">
+  <h1 class="h3">Prenotazioni</h1>
+
+  <form id="form-booking" class="stack" autocomplete="off">
+    <label>
+      Gonfiabile
+      <select name="itemId" id="booking-item" required></select>
+    </label>
+
+    <div class="booking-dates">
+      <label>
+        Dal
+        <input type="date" name="date_from" required />
+      </label>
+      <label>
+        Al
+        <input type="date" name="date_to" required />
+      </label>
+    </div>
+
+    <label class="booking-address-group">
+      Indirizzo di spedizione
+      <select name="addressId" id="booking-address" required>
+        <option value="">Caricamento indirizzi...</option>
+      </select>
+      <small><a href="/profile" data-link>Gestisci indirizzi</a></small>
+    </label>
+
+    <label class="booking-payment-group">
+      Metodo di Pagamento
+      <select name="paymentMethod" id="booking-payment" required>
+        <option value="" disabled selected>-- Seleziona Metodo --</option>
+        <option value="credit_card">💳 Carta di Credito</option>
+        <option value="paypal">🅿️ PayPal</option>
+        <option value="cash">💵 Contanti alla consegna</option>
+      </select>
+    </label>
+
+    <div class="coupon-row">
+      <label for="booking-coupon">Codice sconto (opzionale)</label>
+      <div class="coupon-flex">
+        <input
+          type="text"
+          name="couponCode"
+          id="booking-coupon"
+          placeholder="FESTA10"
+        />
+        <button type="button" class="btn" id="btn-booking-coupon-confirm">
+          Conferma codice
+        </button>
+      </div>
+      <p class="coupon-hint">Puoi usare un solo buono per prenotazione.</p>
+    </div>
+
+    <div id="booking-coupon-result" class="muted"></div>
+
+    <div id="booking-quote" class="muted"></div>
+    <button type="submit" class="btn">Crea prenotazione</button>
+  </form>
+
+  <h2 class="h4 mt-3">Storico</h2>
+  <div id="my-bookings" class="stack"></div>
+</section>

@@ -1,0 +1,26 @@
+<section class="py-3">
+  <h1 class="h3">Gestione figli</h1>
+
+  <form id="form-child" class="stack child-form" autocomplete="off">
+    <label for="child-name">
+      Nome
+      <input
+        id="child-name"
+        type="text"
+        name="name"
+        placeholder="Es. Sofia"
+        required
+      />
+    </label>
+
+    <label for="child-birthday">
+      Compleanno
+      <input id="child-birthday" type="date" name="birthday" required />
+    </label>
+
+    <button type="submit" class="btn">Aggiungi</button>
+  </form>
+
+  <h2 class="h4 mt-3">I miei figli</h2>
+  <div id="children-list" class="stack children-list"></div>
+</section>
