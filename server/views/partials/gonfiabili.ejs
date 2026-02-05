@@ -1,0 +1,50 @@
+<section class="z6-section">
+  <div class="z6-container">
+    <header class="z6-section__head">
+      <h1>Catalogo gonfiabili</h1>
+      <p class="z6-muted">
+        Sfoglia tutti i gonfiabili disponibili per il noleggio
+      </p>
+    </header>
+
+    <div class="z6-grid">
+      <!-- Sidebar filtri -->
+      <aside class="z6-col-3 z6-filters">
+        <form id="form-search" class="z6-stack-3" role="search">
+          <div>
+            <label for="q" class="z6-label">Cerca</label>
+            <input
+              class="z6-input"
+              type="search"
+              id="q"
+              name="q"
+              placeholder="Cerca per parola"
+              autocomplete="off"
+            />
+          </div>
+
+          <!-- filtri aggiuntivi opzionali -->
+          <div>
+            <label class="z6-label">Prezzo massimo (€)</label>
+            <input class="z6-input" type="number" min="0" id="filter-price" />
+          </div>
+
+          <div>
+            <label class="z6-label">Disponibile dal</label>
+            <input class="z6-input" type="date" id="filter-from" />
+          </div>
+
+          <div>
+            <label class="z6-label">al</label>
+            <input class="z6-input" type="date" id="filter-to" />
+          </div>
+        </form>
+      </aside>
+
+      <!-- Elenco card gonfiabili -->
+      <div class="z6-col-9">
+        <div id="items-list" class="z6-cards"></div>
+      </div>
+    </div>
+  </div>
+</section>

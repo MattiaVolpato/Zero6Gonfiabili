@@ -1,0 +1,94 @@
+/* ==================================================================
+   Z6 HELPERS — generic utilities, small helpers, and shared patterns
+   Import order: 2/4
+   ================================================================== */
+
+/* Generic badge utility */
+.badge {
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.35rem;
+  font-size: 0.85em;
+  background: var(--badge-bg, #eee);
+}
+
+/* Generic layout helpers */
+.wrap {
+  flex-wrap: wrap;
+}
+.minw-260 {
+  min-width: 260px;
+}
+
+.grid-auto-160 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.5rem;
+}
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+.grid-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+
+/* Card box (generic) */
+.card-box {
+  border: 1px solid #eee;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+/* Form helpers */
+.reset-fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.legend-tight {
+  margin: 0 0 0.25rem 0;
+}
+.maxw-320 {
+  max-width: 320px;
+}
+
+/* Spacing & flex utilities */
+.flex-row {
+  display: flex;
+}
+.items-center {
+  align-items: center;
+}
+.gap-2 {
+  gap: 0.5rem;
+}
+.gap-3 {
+  gap: 0.75rem;
+}
+.mr-auto {
+  margin-right: auto;
+}
+.mt-1 {
+  margin-top: 0.25rem;
+}
+.mt-3 {
+  margin-top: 1rem;
+} /* unified duplicate */
+.ml-4 {
+  margin-left: 1rem;
+}
+.pt-2 {
+  padding-top: 0.5rem;
+}
+.hidden {
+  display: none !important;
+}
+
+/* Stacked flow utility */
+.stack > * + * {
+  margin-top: 0.75rem;
+}

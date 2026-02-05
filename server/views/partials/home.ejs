@@ -1,0 +1,138 @@
+<!-- HERO -->
+<section class="z6-hero reveal">
+  <div class="z6-container z6-hero__inner">
+    <div class="z6-hero__content">
+      <p class="z6-kicker">Zero6 Noleggio gonfiabili</p>
+      <h1>
+        Spediamo gonfiabili<br />
+        in tutta italia!
+      </h1>
+      <p class="z6-muted">
+        Scegli tra i nostri gonfiabili professionali: <br />sicuri, colorati e
+        pronti a trasformare ogni evento.
+      </p>
+      <div class="z6-hero__actions">
+        <a href="/gonfiabili" class="z6-btn z6-btn--primary">Vedi catalogo</a>
+        <a href="/prenotazioni" data-link class="z6-btn">Prenota ora</a>
+      </div>
+    </div>
+    <div class="z6-hero__art" aria-hidden="true">
+      <img
+        src="/img/home-hero.png"
+        alt="Bambini che giocano su un gonfiabile colorato"
+        class="z6-hero__image"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="promo-wrapper reveal">
+  <div class="promo-badge">
+    <span class="promo-icon">%</span>
+    <span class="promo-title">SCONTI ESCLUSIVI</span>
+  </div>
+
+  <div class="promo-card">
+    <div class="promo-left">
+      <h3>
+        Con la nostra tessera<br />
+        avrai accesso a<br />
+        sconti esclusivi
+      </h3>
+
+      <!-- Se loggato: vai alla tessera, altrimenti alla login -->
+      <a class="btn-pill" href="<%= isAuthenticated ? '/tessera' : '/login' %>">
+        La tua tessera
+      </a>
+    </div>
+
+    <div class="promo-right">
+      <div class="promo-box">
+        <h4>Non sei registrato?</h4>
+        <p>
+          Solo con la registrazione puoi aver accesso alle nostre offerte
+          limitate
+        </p>
+
+        <!-- Se non loggato: vai a registrazione, se loggato: profilo -->
+        <a
+          class="btn-pill"
+          href="<%= isAuthenticated ? '/profile' : '/register' %>"
+        >
+          Registrati
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- === Newsletter inline === -->
+<section id="home-newsletter" class="nl">
+  <h2 class="nl-title">
+    Ricevi notizie su nuovi gonfiabili e nuove offerte dedicate !
+  </h2>
+
+  <div class="nl-card reveal">
+    <form id="form-home-news" class="nl-form" novalidate>
+      <label for="home-news-email" class="sr-only">Email</label>
+      <input
+        type="email"
+        id="home-news-email"
+        name="email"
+        class="nl-input"
+        placeholder="Inserisci la tua email..."
+        required
+      />
+      <button type="submit" id="home-news-submit" class="nl-btn">
+        Iscriviti
+      </button>
+    </form>
+    <div id="home-news-msg" class="nl-msg" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- SEZIONE REVEAL -->
+<section id="top-picks" class="z6-section">
+  <div class="z6-container z6-stack-5">
+    <header class="z6-section__head reveal">
+      <h2>I più scelti</h2>
+      <p class="z6-muted">Filtra e trova il gonfiabile perfetto.</p>
+    </header>
+
+    <form
+      id="form-search"
+      class="z6-searchbar"
+      role="search"
+      aria-label="Cerca gonfiabili"
+    >
+      <input
+        class="z6-input"
+        type="search"
+        name="q"
+        placeholder="Cerca per nome o parola chiave…"
+        autocomplete="off"
+      />
+    </form>
+
+    <div id="items-list" class="z6-cards"></div>
+  </div>
+</section>
+
+<!-- === Recensioni reali utenti === -->
+<section id="home-reviews" class="reviews">
+  <h2 class="reviews-title reveal">Cosa dicono dei nostri gonfiabili?</h2>
+
+  <div id="home-reviews-average" class="reviews-average"></div>
+
+  <div
+    id="home-reviews-list"
+    class="reviews-grid reveal"
+    aria-live="polite"
+  ></div>
+
+  <p id="home-reviews-empty" class="muted hidden">Ancora nessuna recensione</p>
+  <div id="home-reviews-actions" class="reviews-actions hidden">
+    <button id="home-reviews-more">Mostra altro</button>
+    <button id="home-reviews-less" class="hidden">Mostra meno</button>
+  </div>
+</section>

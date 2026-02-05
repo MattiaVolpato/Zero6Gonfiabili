@@ -1,0 +1,58 @@
+<section class="py-3 newsletter-section newsletter--split">
+  <div class="newsletter-card">
+    <!-- Colonna immagine laterale -->
+    <aside class="newsletter-illustration" aria-hidden="true">
+      <div class="newsletter-logo">
+        <img
+          src="/img/zerosei-logo.png"
+          alt="Zero Gonfiabili"
+          class="logo-img"
+          loading="lazy"
+        />
+      </div>
+
+      <ul class="newsletter-perks">
+        <li>Nuovi gonfiabili in anteprima</li>
+        <li>Sconti esclusivi per iscritti</li>
+        <li>Promo stagionali e last-minute</li>
+      </ul>
+    </aside>
+
+    <!-- Colonna contenuti -->
+    <div class="newsletter-body">
+      <header class="newsletter-header">
+        <h1 class="h3">Iscriviti alla Newsletter</h1>
+        <p class="newsletter-subtitle">
+          Ricevi aggiornamenti sui <strong>nuovi gonfiabili</strong>, offerte
+          stagionali e <strong>sconti esclusivi</strong> riservati agli
+          iscritti!
+        </p>
+      </header>
+
+      <form id="form-news-sub" class="stack newsletter-form" autocomplete="off">
+        <label for="news-email" class="newsletter-label">
+          <span class="label-text">La tua email</span>
+          <input
+            type="email"
+            name="email"
+            id="news-email"
+            required
+            placeholder="nome@email.com"
+          />
+        </label>
+
+        <div class="newsletter-actions">
+          <button type="submit" class="btn">Iscriviti</button>
+          <button id="btn-news-unsub" class="btn" type="button">
+            Disiscriviti
+          </button>
+          <button id="btn-news-check" class="btn" type="button">
+            Verifica stato
+          </button>
+        </div>
+      </form>
+
+      <div id="news-result" class="mt-3 newsletter-result"></div>
+    </div>
+  </div>
+</section>

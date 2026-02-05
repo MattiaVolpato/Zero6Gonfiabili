@@ -1,0 +1,42 @@
+<section class="py-3">
+  <a href="/gonfiabili" data-link class="btn">← Torna al catalogo</a>
+
+  <!-- Contenitore del dettaglio: la griglia viene gestita dal CSS con .detail-grid -->
+  <div id="item-detail" class="detail-grid"></div>
+</section>
+
+<section id="reviews-box" class="mt-3">
+  <h2 class="h5">Recensioni</h2>
+  <div id="reviews-summary" class="muted"></div>
+
+  <!-- Lista recensioni -->
+  <div id="reviews-list" class="stack"></div>
+
+  <!-- Form: resta nascosto finché lo abiliti da JS -->
+  <form id="review-form" class="stack hidden">
+    <label>
+      Voto
+      <select name="rating" required>
+        <option value="">Scegli…</option>
+        <option value="5">5 ⭐</option>
+        <option value="4">4 ⭐</option>
+        <option value="3">3 ⭐</option>
+        <option value="2">2 ⭐</option>
+        <option value="1">1 ⭐</option>
+      </select>
+    </label>
+
+    <label>
+      Commento (max 300)
+      <textarea
+        name="comment"
+        rows="2"
+        maxlength="300"
+        placeholder="Come ti sei trovato?"
+      ></textarea>
+    </label>
+
+    <button type="submit" class="btn">Invia recensione</button>
+    <div id="review-msg" class="muted"></div>
+  </form>
+</section>
