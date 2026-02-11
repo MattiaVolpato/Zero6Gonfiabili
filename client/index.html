@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gonfiabili — Noleggio per feste</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="/css/z6-core.css" />
+  <link rel="stylesheet" href="/css/z6-helpers.css" />
+  <link rel="stylesheet" href="/css/z6-pages.css" />
+
+  <link rel="stylesheet" href="/css/admin.css" />
+  <link rel="stylesheet" href="/css/blog.css" />
+
+  <script src="/vendor/page.js" defer></script>
+  <script type="module" src="/js/main.js"></script>
+</head>
+
+<body>
+  <!-- ================= HEADER ================= -->
+  <header class="z6-header">
+    <div class="z6-container z6-header__row">
+      <!-- BRAND -->
+      <a href="/" data-link class="z6-brand">
+        <img src="/img/zerosei-logo.png" alt="Gonfiabili" class="z6-brand__logo" />
+        <span class="z6-brand__name">Zero6 <br />
+          Gonfiabili</span>
+      </a>
+
+      <!-- NAVBAR (solo voci pubbliche) -->
+      <nav class="z6-nav">
+        <ul class="z6-nav__list">
+          <li>
+            <a href="/" data-link class="z6-nav__link" data-nav="home">Home</a>
+          </li>
+          <li>
+            <a href="/gonfiabili" data-link class="z6-nav__link" data-nav="gonfiabili">Catalogo</a>
+          </li>
+          <li>
+            <a href="/newsletter" data-link class="z6-nav__link" data-nav="newsletter">Newsletter</a>
+          </li>
+          <li>
+            <a href="/faq" data-link class="z6-nav__link" data-nav="faq">FAQ</a>
+          </li>
+          <li>
+            <a href="/blog" data-link class="z6-nav__link" data-nav="blog">Blog</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- AREA UTENTE -->
+      <div class="z6-user">
+        <!-- Stato non loggato -->
+        <a href="/login" id="nav-login" data-link class="z6-btn z6-btn--outline">Accedi</a>
+        <a href="/register" id="nav-register" data-link class="z6-btn z6-btn--primary">Registrati</a>
+
+        <!-- Stato loggato (menu a tendina) -->
+        <div class="z6-user__logged" id="nav-userbox" hidden>
+          <button id="user-menu-toggle" type="button" class="z6-btn">
+            <span id="nav-username" class="z6-user__name">Profilo</span>
+            <svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M5 7l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" />
+            </svg>
+          </button>
+
+          <div class="z6-user__dropdown" id="user-menu" hidden>
+            <a href="/prenotazioni" data-link class="z6-nav__link">Prenotazioni</a>
+            <a href="/gestione-figli" data-link class="z6-nav__link">Gestione figli</a>
+            <a href="/preferiti" data-link id="nav-favorites" class="z6-nav__link">Preferiti</a>
+            <a href="/profile" data-link id="nav-profile" class="z6-nav__link">Profilo</a>
+            <a href="/tessera" data-link class="z6-nav__link">Tessera fedeltà</a>
+            <a href="/admin" data-link id="nav-admin" class="z6-nav__link">Area amministratore</a>
+            <button id="nav-logout" class="z6-nav__link">Esci</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main id="app-root" class="z6-main" tabindex="-1" aria-live="polite">
+    <!-- Le viste SPA vengono iniettate qui -->
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="z6-footer">
+    <div class="z6-container z6-footer__row">
+      <div class="z6-footer__col">
+        <h4 class="z6-footer__title">Contatti</h4>
+        <ul class="z6-footer__list">
+          <li>
+            Email:
+            <a href="mailto:volpato_riccardo@libero.it">volpato_riccardo@libero.it</a>
+          </li>
+          <li>Tel: <a href="tel:+39 348 069 7907">+39 348 069 7907</a></li>
+          <li>
+            Indirizzo:
+            <a href="https://www.google.com/maps/place/Corso+Dante,+17,+15027+Pontestura+AL/@45.1382078,8.3335416,17z/data=!3m1!4b1!4m6!3m5!1s0x4787b9e52bf3385f:0xc3da087b36a2e4e4!8m2!3d45.138204!4d8.3361165!16s%2Fg%2F11h7nbdjf1?entry=ttu&g_ep=EgoyMDI1MTEwMi4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank" rel="noopener noreferrer">Pontestura, Corso Dante 17</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="z6-footer__col">
+        <h4 class="z6-footer__title">Link utili</h4>
+        <ul class="z6-footer__list">
+          <li><a href="/cookie-policy" data-link>Cookie Policy</a></li>
+          <li><a href="/privacy-policy" data-link>Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="z6-footer__col">
+        <h4 class="z6-footer__title">Seguici</h4>
+        <ul class="z6-footer__list">
+          <li>
+            <a href="https://www.facebook.com/p/Tigonfioit-100042381477238/?locale=it_IT"
+              aria-label="Facebook">Facebook</a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/channel/UCBXQQCSZWH6RvNsgmlpgLgg" aria-label="YouTube">YouTube</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="z6-footer__bottom">
+      <div class="z6-container z6-footer__bottomRow">
+        <span>© <span id="year"></span> Zero6 Gonfiabili</span>
+      </div>
+    </div>
+  </footer>
+  <!-- ================= COOKIE BANNER ================= -->
+  <div id="cookie-banner" class="cookie-banner" hidden>
+    <div class="cookie-banner__content">
+      <p class="cookie-banner__text">
+        Questo sito utilizza cookie tecnici di sessione per garantire il
+        corretto funzionamento. Per saperne di più leggi la
+        <a href="/cookie-policy" data-link>Cookie Policy</a>.
+      </p>
+      <div class="cookie-banner__actions">
+        <button id="cookie-accept" class="btn" type="button">Accetta</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

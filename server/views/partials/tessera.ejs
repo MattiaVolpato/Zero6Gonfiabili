@@ -1,0 +1,42 @@
+<section class="loyalty">
+  <h1 class="loyalty__title">Tessera</h1>
+  <div id="loyalty-card" class="loyalty-card">
+    <div class="loyalty-card__row">
+      <div class="loyalty-card__stat">
+        <div class="loyalty-card__stat-num" id="loy-completed">0</div>
+        <div class="loyalty-card__stat-label">Noleggi terminati</div>
+      </div>
+      <div class="loyalty-card__stat">
+        <div class="loyalty-card__stat-num" id="loy-available">0</div>
+        <div class="loyalty-card__stat-label">Sconti disponibili</div>
+      </div>
+      <div class="loyalty-card__stat">
+        <div class="loyalty-card__stat-num">10%</div>
+        <div class="loyalty-card__stat-label">Sconto</div>
+      </div>
+    </div>
+
+    <div class="loyalty-card__progress">
+      <div class="loyalty-card__progress-bar">
+        <div class="loyalty-card__progress-fill w-0" id="loy-progress"></div>
+      </div>
+      <div class="loyalty-card__progress-text" id="loy-progress-text">
+        0 / 2 noleggi per il prossimo sconto
+      </div>
+    </div>
+
+    <!-- ▼▼▼ SEZIONE: Sconti ottenuti ▼▼▼ -->
+    <section class="loyalty-card__earned" aria-labelledby="loy-earned-title">
+      <h3 id="loy-earned-title" class="loyalty-card__subtitle">
+        Sconti ottenuti
+      </h3>
+      <div id="loy-earned-list" class="loyalty-card__earned-list"></div>
+      <p id="loy-earned-empty" class="loyalty-card__earned-empty muted hidden">
+        Non hai ancora sconti ottenuti. Completa 2 noleggi per ottenerne uno!
+      </p>
+    </section>
+    <!-- ▲▲▲ FINE SEZIONE ▲▲▲ -->
+
+    <p class="loyalty-card__note" id="loy-note"></p>
+  </div>
+</section>

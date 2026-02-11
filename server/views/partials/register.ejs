@@ -1,0 +1,113 @@
+<section class="register-wrapper">
+  <section class="py-3 container">
+    <h1 class="h3">Registrazione</h1>
+
+    <form id="form-register" class="stack" novalidate>
+      <div>
+        <label
+          >Nome
+          <input
+            type="text"
+            name="first_name"
+            autocomplete="given-name"
+            required
+          />
+        </label>
+
+        <label
+          >Cognome
+          <input
+            type="text"
+            name="last_name"
+            autocomplete="family-name"
+            required
+          />
+        </label>
+
+        <label
+          >Email
+          <input type="email" name="email" autocomplete="email" required />
+        </label>
+
+        <label
+          >Password (min 6 caratteri)
+          <input
+            type="password"
+            name="password"
+            minlength="6"
+            autocomplete="new-password"
+            required
+          />
+        </label>
+
+        <label
+          >Conferma password
+          <input
+            type="password"
+            name="password2"
+            minlength="6"
+            autocomplete="new-password"
+            required
+          />
+          <div id="pw-hint" class="muted mt-1"></div>
+        </label>
+
+        <label
+          >Data di nascita
+          <!-- la JS controllerà l’età ≥ 15; puoi anche impostare max via JS se vuoi -->
+          <input type="date" name="birthday" required />
+        </label>
+
+        <label
+          >Città
+          <input
+            type="text"
+            name="city"
+            autocomplete="address-level2"
+            required
+          />
+        </label>
+
+        <label
+          >CAP
+          <input
+            type="text"
+            name="cap"
+            inputmode="numeric"
+            pattern="^\d{5}$"
+            title="5 cifre"
+            autocomplete="postal-code"
+            required
+          />
+        </label>
+
+        <label
+          >Indirizzo
+          <input
+            type="text"
+            name="address"
+            autocomplete="address-line1"
+            required
+          />
+        </label>
+
+        <label
+          >Telefono (10 cifre)
+          <input
+            type="tel"
+            name="phone"
+            inputmode="numeric"
+            pattern="^\d{10}$"
+            title="Inserisci 10 cifre"
+            autocomplete="tel-national"
+            required
+          />
+        </label>
+      </div>
+
+      <button type="submit" class="btn">Crea account</button>
+    </form>
+
+    <div id="register-msg" class="muted mt-3"></div>
+  </section>
+</section>
